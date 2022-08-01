@@ -14,20 +14,28 @@ class Quack {
   }
 
   pop() {
-    if (this.left.length <= 0 && this.right.length <= 0) {
+    if (
+      this.left.length <= 0 &&
+      this.right.length <= 0
+    ) {
       console.log("Quack is already Empty");
       return;
     }
-    if (this.left.length === 0) this.balance(this.right, this.left);
+    if (this.left.length === 0)
+      this.balance(this.right, this.left);
     this.left.pop();
   }
 
   pull() {
-    if (this.left.length <= 0 && this.right.length <= 0) {
+    if (
+      this.left.length <= 0 &&
+      this.right.length <= 0
+    ) {
       console.log("Quack is already Empty");
       return;
     }
-    if (this.right.length === 0) this.balance(this.left, this.right);
+    if (this.right.length === 0)
+      this.balance(this.left, this.right);
     this.right.pop();
   }
 
